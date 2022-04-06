@@ -6,7 +6,7 @@ var Start;
 let Clicked = false 
 const sclC = scl*20;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(sclC, sclC);
   s = new Snake()
   frameRate(10)
   pickLocation()
@@ -54,11 +54,6 @@ function draw() {
     image(Start,0,0)
   }
 }
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
-
 
 function mouseClicked(){
     Clicked = true
