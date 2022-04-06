@@ -2,6 +2,8 @@ var s;
 var scl = 40;
 var img;
 var food;
+var Start;
+let Clicked = false 
 const sclC = scl*20;
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -9,6 +11,7 @@ function setup() {
   frameRate(10)
   pickLocation()
   img = loadImage('Apple.png');
+  Start = loadImage("Start.png");
 }
 function pickLocation(){
   var cols = floor(width/scl)
@@ -47,8 +50,16 @@ function draw() {
   textSize(32)
   text(Str1, 150, 50)
   text(Str2, 150, 750)
+   if (Clicked == false){
+    image(Start,0,0)
+  }
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+}
+
+
+function mouseClicked(){
+    Clicked = true
 }
