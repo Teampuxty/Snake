@@ -9,5 +9,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
         <script src="sketch.js"></script> </script>
         <script src="Snake.js"></script> </script>
+        <script type="module">
+         // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyAxYx4RYXaoGguwsMDgAzltY6N6nRLLk0Y",
+        authDomain: "snake-ef885.firebaseapp.com",
+        projectId: "snake-ef885",
+        storageBucket: "snake-ef885.appspot.com",
+        messagingSenderId: "882875513530",
+        appId: "1:882875513530:web:77f281d948931980c9e083",
+     measurementId: "G-VGFNTJKZY2"
+     };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     </body>
 </html>
