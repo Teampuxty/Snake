@@ -8,6 +8,7 @@ function setup() {
   s = new Snake()
   frameRate(10)
   pickLocation()
+  img = loadImage('Apple.png');
 }
 function pickLocation(){
   var cols = floor(width/scl)
@@ -26,12 +27,14 @@ else if (keyCode === LEFT_ARROW){
     s.dir(-1,0)}
 }
 function draw() {
+  const music = new Audio('Apple.wav')
   var Score = ["Score: ", s.tail.length]
   var Str1 = join(Score, " ")
   var Score2 = ["High Score: ", s.HighScore]
   var Str2 = join(Score2, " ")
   background(1);
   if(s.eat(food)){
+    music.play()
     pickLocation()
   }
   s.death()
@@ -39,6 +42,7 @@ function draw() {
   s.Show()
   fill(255,145,50)
   rect(food.x, food.y, scl, scl)
+  image(img, food.x, food.y)
   fill(255)
   textSize(32)
   text(Str1, 150, 50)
