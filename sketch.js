@@ -4,7 +4,7 @@ var img;
 var food;
 const sclC = scl*20;
 function setup() {
-  createCanvas(sclC, sclC);
+  createCanvas(windowWidth, windowHeight);
   s = new Snake()
   frameRate(10)
   pickLocation()
@@ -47,4 +47,8 @@ function draw() {
   textSize(32)
   text(Str1, 150, 50)
   text(Str2, 150, 750)
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
