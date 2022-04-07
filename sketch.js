@@ -33,7 +33,7 @@ function draw() {
   const music = new Audio('Apple.wav')
   var Score = ["Score: ", s.tail.length]
   var Str1 = join(Score, " ")
-  var Score2 = ["High Score: ", s.HighScore]
+  var Score2 = ["High Score: ", getItem("HighScore")]
   var Str2 = join(Score2, " ")
   background(1);
   if(s.eat(food)){
