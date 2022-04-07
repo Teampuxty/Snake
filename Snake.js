@@ -31,6 +31,7 @@ function Snake() {
             this.tail = []
           } else {
             this.HighScore = this.tail.length
+            storeItem("HighScore", this.tail.length)
             this.total = 0
             this.tail = []
           }
