@@ -31,6 +31,7 @@ else if (keyCode === LEFT_ARROW){
 }
 function draw() {
   const music = new Audio('Apple.wav')
+  s.HighScore = getItem("HighScore")
   var Score = ["Score: ", s.tail.length]
   var Str1 = join(Score, " ")
   var Score2 = ["High Score: ", getItem("HighScore")]
